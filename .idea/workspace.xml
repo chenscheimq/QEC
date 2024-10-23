@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f99a8df2-b249-4fc1-9cf8-25d3697684c8" name="Changes" comment="Updating - 4qubit - after" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2mZ6W9ZrUxy3izcwYr75FnTJ2Ro" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.-m notebook.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/chenscheim/PycharmProjects/QEC_A/EC3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/EC3" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PY-241.14494.241" />
+        <option value="bundled-python-sdk-0509580d9d50-28c9f5db9ffe-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.14494.241" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f99a8df2-b249-4fc1-9cf8-25d3697684c8" name="Changes" comment="" />
+      <created>1727271780025</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727271780025</updated>
+      <workItem from="1727271780839" duration="32000000" />
+    </task>
+    <task id="LOCAL-00001" summary="deleting Test">
+      <option name="closed" value="true" />
+      <created>1727274011062</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727274011062</updated>
+    </task>
+    <task id="LOCAL-00002" summary="deleting Test">
+      <option name="closed" value="true" />
+      <created>1727274547408</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1727274547408</updated>
+    </task>
+    <task id="LOCAL-00003" summary="deleting Test">
+      <option name="closed" value="true" />
+      <created>1727274641423</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1727274641423</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Updating - the measurment works. After Adi's review">
+      <option name="closed" value="true" />
+      <created>1727605769570</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727605769570</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updating - 4qubit">
+      <option name="closed" value="true" />
+      <created>1727767277760</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1727767277760</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Updating - 4qubit">
+      <option name="closed" value="true" />
+      <created>1727767772230</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1727767772230</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Updating - 4qubit - after">
+      <option name="closed" value="true" />
+      <created>1727778550309</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1727778550309</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Updating - 4qubit - after">
+      <option name="closed" value="true" />
+      <created>1727789959958</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1727789959958</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Updating - 4qubit - after">
+      <option name="closed" value="true" />
+      <created>1728381923698</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1728381923698</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Updating - 4qubit - after">
+      <option name="closed" value="true" />
+      <created>1728545310086</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1728545310086</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Updating - 4qubit - after">
+      <option name="closed" value="true" />
+      <created>1728545348628</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1728545348628</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Updating - 4qubit - after">
+      <option name="closed" value="true" />
+      <created>1729453586157</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1729453586157</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Updating - 4qubit - after">
+      <option name="closed" value="true" />
+      <created>1729577760336</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1729577760336</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Updating - 4qubit - after">
+      <option name="closed" value="true" />
+      <created>1729613512026</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1729613512026</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Updating - 4qubit - after">
+      <option name="closed" value="true" />
+      <created>1729613740720</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1729613740720</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Updating - 4qubit - after">
+      <option name="closed" value="true" />
+      <created>1729671859523</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1729671859523</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="deleting Test" />
+    <MESSAGE value="Updating - the measurment works. After Adi's review" />
+    <MESSAGE value="Updating - 4qubit" />
+    <MESSAGE value="Updating - 4qubit - after" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating - 4qubit - after" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/QEC_A$_m_notebook.coverage" NAME="-m notebook Coverage Results" MODIFIED="1729669683077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
