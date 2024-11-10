@@ -4,36 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f99a8df2-b249-4fc1-9cf8-25d3697684c8" name="Changes" comment="adding the correct aproch runtiume version">
+    <list default="true" id="f99a8df2-b249-4fc1-9cf8-25d3697684c8" name="Changes" comment="Updating - 4qubit - after">
+      <change beforePath="$PROJECT_DIR$/.idea/jupyter-settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jupyter-settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EC3/EC3_q.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/EC3/EC3_q.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EC3/EC3_runtimes.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/EC3/EC3_runtimes.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EC3/RAP_stabilizers.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/EC3/RAP_stabilizers.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
-    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Jupyter Notebook" />
-      </list>
-    </option>
-  </component>
-  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
-    <envs>
-      <env key="FLASK_APP" value="app" />
-    </envs>
-    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
-    <option name="myEnvs">
-      <map>
-        <entry key="FLASK_APP" value="app" />
-      </map>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -104,8 +85,6 @@
       <workItem from="1730365831411" duration="273000" />
       <workItem from="1730366111314" duration="2101000" />
       <workItem from="1730368281334" duration="3099000" />
-      <workItem from="1730372358856" duration="22705000" />
-      <workItem from="1730633022057" duration="66528000" />
     </task>
     <task id="LOCAL-00001" summary="deleting Test">
       <option name="closed" value="true" />
@@ -259,47 +238,7 @@
       <option name="project" value="LOCAL" />
       <updated>1730187508956</updated>
     </task>
-    <task id="LOCAL-00020" summary="Updating - 4qubit - after">
-      <option name="closed" value="true" />
-      <created>1730372548553</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1730372548553</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Updating - 4qubit - after">
-      <option name="closed" value="true" />
-      <created>1730544056117</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1730544056117</updated>
-    </task>
-    <task id="LOCAL-00022" summary="adding the correct aproch runtiume version">
-      <option name="closed" value="true" />
-      <created>1730720312385</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1730720312385</updated>
-    </task>
-    <task id="LOCAL-00023" summary="adding the correct aproch runtiume version">
-      <option name="closed" value="true" />
-      <created>1730893737231</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1730893737231</updated>
-    </task>
-    <task id="LOCAL-00024" summary="adding the correct aproch runtiume version">
-      <option name="closed" value="true" />
-      <created>1730899948599</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1730899948599</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,8 +249,7 @@
     <MESSAGE value="Updating - the measurment works. After Adi's review" />
     <MESSAGE value="Updating - 4qubit" />
     <MESSAGE value="Updating - 4qubit - after" />
-    <MESSAGE value="adding the correct aproch runtiume version" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding the correct aproch runtiume version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating - 4qubit - after" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/QEC_A$_m_notebook.coverage" NAME="-m notebook Coverage Results" MODIFIED="1729669683077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

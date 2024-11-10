@@ -12,11 +12,11 @@
         </JupyterConnectionParameters>
         <JupyterConnectionParameters>
           <option name="authType" value="notebook" />
-          <option name="token" value="9fafe1b73a011afeeee9726266ffa3acc4c0391ab6a374f9" />
+          <option name="token" value="" />
           <option name="urlString" value="http://localhost:8888" />
           <authParams2>
             <map>
-              <entry key="token" value="9fafe1b73a011afeeee9726266ffa3acc4c0391ab6a374f9" />
+              <entry key="token" value="" />
             </map>
           </authParams2>
         </JupyterConnectionParameters>
