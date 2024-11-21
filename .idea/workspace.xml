@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f99a8df2-b249-4fc1-9cf8-25d3697684c8" name="Changes" comment="nice checkpoint because everything works" />
+    <list default="true" id="f99a8df2-b249-4fc1-9cf8-25d3697684c8" name="Changes" comment="adding gadgets">
+      <change afterPath="$PROJECT_DIR$/Gadgets/RAP_stab_gadg.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EC3/EC3_runtimes.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/EC3/EC3_runtimes.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EC3/RAP_stabilizers.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/EC3/RAP_stabilizers.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gadgets/check_commutation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Gadgets/check_commutation.ipynb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +108,8 @@
       <workItem from="1730368281334" duration="3099000" />
       <workItem from="1730372358856" duration="22705000" />
       <workItem from="1730633022057" duration="66528000" />
-      <workItem from="1732000518345" duration="1267000" />
+      <workItem from="1732000518345" duration="8641000" />
+      <workItem from="1732107239776" duration="11073000" />
     </task>
     <task id="LOCAL-00001" summary="deleting Test">
       <option name="closed" value="true" />
@@ -312,7 +319,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732001728071</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="adding gadgets">
+      <option name="closed" value="true" />
+      <created>1732001914836</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1732001914836</updated>
+    </task>
+    <task id="LOCAL-00028" summary="adding gadgets">
+      <option name="closed" value="true" />
+      <created>1732001988604</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1732001988604</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,18 +348,8 @@
     <MESSAGE value="Updating - 4qubit - after" />
     <MESSAGE value="adding the correct aproch runtiume version" />
     <MESSAGE value="nice checkpoint because everything works" />
-    <option name="LAST_COMMIT_MESSAGE" value="nice checkpoint because everything works" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
-          <url>notebook:///Users/chenscheim/PycharmProjects/QEC_A/EC3/RAP_stabilizers.ipynb</url>
-          <line>3</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="adding gadgets" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding gadgets" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/QEC_A$_m_notebook.coverage" NAME="-m notebook Coverage Results" MODIFIED="1729669683077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
