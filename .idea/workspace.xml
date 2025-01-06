@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f99a8df2-b249-4fc1-9cf8-25d3697684c8" name="Changes" comment="Improved H_gad&#10;Checkpoint for the day">
-      <change afterPath="$PROJECT_DIR$/Gadgets/one_el_in_H_comp.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gadgets/krylov_checking.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Gadgets/krylov_checking.ipynb" afterDir="false" />
+    <list default="true" id="f99a8df2-b249-4fc1-9cf8-25d3697684c8" name="Changes" comment="working vertion">
+      <change afterPath="$PROJECT_DIR$/Gadgets/Basic_3_local_no_pulse.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gadgets/Pi_pulse_gad.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gadgets/RAP_stab_3qubit.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gadgets/RAP_stab_4qubit.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gadgets/gadget_sim_simple.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EC3/RAP_stabilizers.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/EC3/RAP_stabilizers.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gadgets/check_commutation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Gadgets/check_commutation.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gadgets/gadget_sim.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Gadgets/gadget_sim.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,21 +58,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.-m notebook.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/chenscheim/PycharmProjects/QEC_A/Gadgets",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.-m notebook.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/chenscheim/PycharmProjects/QEC_A/Gadgets&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="QEC_A" is-module-sdk="true">
@@ -109,7 +116,13 @@
       <workItem from="1732000518345" duration="8641000" />
       <workItem from="1732107239776" duration="11073000" />
       <workItem from="1732183163778" duration="1241000" />
-      <workItem from="1732692084062" duration="99199000" />
+      <workItem from="1732692084062" duration="132873000" />
+      <workItem from="1733996681624" duration="15455000" />
+      <workItem from="1734338622670" duration="849000" />
+      <workItem from="1734434082274" duration="39859000" />
+      <workItem from="1734638184213" duration="8738000" />
+      <workItem from="1734860369201" duration="29412000" />
+      <workItem from="1735720779948" duration="26256000" />
     </task>
     <task id="LOCAL-00001" summary="deleting Test">
       <option name="closed" value="true" />
@@ -391,7 +404,47 @@
       <option name="project" value="LOCAL" />
       <updated>1733669525205</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Improved H_gad&#10;Checkpoint for the day">
+      <option name="closed" value="true" />
+      <created>1733747731231</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1733747731231</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Improved H_gad&#10;Checkpoint for the day">
+      <option name="closed" value="true" />
+      <created>1733902673949</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1733902673949</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Improved H_gad&#10;Checkpoint for the day">
+      <option name="closed" value="true" />
+      <created>1733904417720</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1733904417720</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Improved H_gad&#10;Checkpoint for the day">
+      <option name="closed" value="true" />
+      <created>1733914299943</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1733914299943</updated>
+    </task>
+    <task id="LOCAL-00040" summary="working vertion">
+      <option name="closed" value="true" />
+      <created>1733996174482</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1733996174482</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +460,8 @@
     <MESSAGE value="adding gadgets" />
     <MESSAGE value="H_gad is propably constructed correctly" />
     <MESSAGE value="Improved H_gad&#10;Checkpoint for the day" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved H_gad&#10;Checkpoint for the day" />
+    <MESSAGE value="working vertion" />
+    <option name="LAST_COMMIT_MESSAGE" value="working vertion" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
