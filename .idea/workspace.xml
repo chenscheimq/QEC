@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99a8df2-b249-4fc1-9cf8-25d3697684c8" name="Changes" comment="after a lot of time not updating">
-      <change afterPath="$PROJECT_DIR$/Stabilizers/9_qubit_stab.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Subsystem QEC/Error_sim.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Subsystem QEC/check_SQEC.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stabilizers/generate_stab.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Subsystem QEC/RAP_master-subsystems.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EC3/EC3_runtimes.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/EC3/EC3_runtimes.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EC3/RAP_stabilizers.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/EC3/RAP_stabilizers.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gadgets/Basic_3_local_no_pulse.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Gadgets/Basic_3_local_no_pulse.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gadgets/RAP_stab_3qubit.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Gadgets/RAP_stab_3qubit.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gadgets/RAP_stab_4qubit.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Gadgets/RAP_stab_4qubit.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RAP/RAP_stabilizers.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/RAP/RAP_stabilizers.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gadgets/check_commutation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Gadgets/check_commutation.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subsystem QEC/Error_sim.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Subsystem QEC/Error_sim.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Subsystem QEC/check_SQEC.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Subsystem QEC/check_SQEC.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +50,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -58,21 +62,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.-m notebook.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/chenscheim/PycharmProjects/QEC_A/Gadgets&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.-m notebook.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/chenscheim/PycharmProjects/QEC_A/Subsystem QEC",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="QEC_A" is-module-sdk="true">
@@ -83,6 +87,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Subsystem QEC" />
       <recent name="$PROJECT_DIR$/Gadgets" />
       <recent name="$PROJECT_DIR$/EC3" />
     </key>
@@ -127,6 +132,11 @@
       <workItem from="1736699325107" duration="6467000" />
       <workItem from="1736868009809" duration="8443000" />
       <workItem from="1737122214297" duration="27020000" />
+      <workItem from="1737542256092" duration="11799000" />
+      <workItem from="1738590979082" duration="28315000" />
+      <workItem from="1739806507726" duration="9806000" />
+      <workItem from="1739959469921" duration="13931000" />
+      <workItem from="1740421998862" duration="42575000" />
     </task>
     <task id="LOCAL-00001" summary="deleting Test">
       <option name="closed" value="true" />
@@ -456,7 +466,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736162165315</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="after a lot of time not updating">
+      <option name="closed" value="true" />
+      <created>1737544249665</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1737544249665</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
