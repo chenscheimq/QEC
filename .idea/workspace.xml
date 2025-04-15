@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99a8df2-b249-4fc1-9cf8-25d3697684c8" name="Changes" comment="after a lot of time not updating">
-      <change afterPath="$PROJECT_DIR$/Stabilizers/generate_stab.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Subsystem QEC/RAP_master-subsystems.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CQEC/CQEC_3qubit.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CQEC/CQEC_3qubit_fidelity.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CQEC/CQEC_fidelity.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CQEC/tests.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EC3/EC3_runtimes.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/EC3/EC3_runtimes.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EC3/RAP_stabilizers.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/EC3/RAP_stabilizers.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gadgets/Basic_3_local_no_pulse.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Gadgets/Basic_3_local_no_pulse.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gadgets/RAP_stab_4qubit.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Gadgets/RAP_stab_4qubit.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gadgets/check_commutation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Gadgets/check_commutation.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Subsystem QEC/Error_sim.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Subsystem QEC/Error_sim.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Subsystem QEC/check_SQEC.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Subsystem QEC/check_SQEC.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +62,7 @@
     "Python.-m notebook.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/chenscheim/PycharmProjects/QEC_A/Subsystem QEC",
+    "last_opened_file_path": "/Users/chenscheim/PycharmProjects/QEC_A/CQEC",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -87,6 +82,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CQEC" />
       <recent name="$PROJECT_DIR$/Subsystem QEC" />
       <recent name="$PROJECT_DIR$/Gadgets" />
       <recent name="$PROJECT_DIR$/EC3" />
@@ -136,7 +132,9 @@
       <workItem from="1738590979082" duration="28315000" />
       <workItem from="1739806507726" duration="9806000" />
       <workItem from="1739959469921" duration="13931000" />
-      <workItem from="1740421998862" duration="42575000" />
+      <workItem from="1740421998862" duration="47968000" />
+      <workItem from="1743665353565" duration="8271000" />
+      <workItem from="1743943450597" duration="55265000" />
     </task>
     <task id="LOCAL-00001" summary="deleting Test">
       <option name="closed" value="true" />
@@ -474,7 +472,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737544249665</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="after a lot of time not updating">
+      <option name="closed" value="true" />
+      <created>1741185131175</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1741185131175</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
