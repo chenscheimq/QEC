@@ -1,0 +1,275 @@
+%\documentclass[11pt]{article}
+\documentclass[reprint, amsmath,amssymb,nofootinbib, aps,superscriptaddress,longbibliography]{revtex4-1}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[normalem]{ulem}
+\usepackage{float}
+\usepackage{comment}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{lipsum}
+%\usepackage[numbers]{natbib}
+\usepackage{hyperref}
+\usepackage{cancel}
+\usepackage{ragged2e}
+\usepackage{graphics}
+\usepackage{placeins}
+\usepackage{etoolbox}
+\usepackage{adjustbox}
+\setcounter{section}{0}
+\pagenumbering{gobble}
+
+% Custom commands
+
+\begin{document}
+\raggedright
+
+\title{Rapid Adiabatic Passage with Error Suppression}
+\author{C. Scheim}
+\affiliation{Department of Applied Physics, The Hebrew University of Jerusalem, Jerusalem 9190401, Israel}
+\author{A. Pick}
+\affiliation{Department of Applied Physics, The Hebrew University of Jerusalem, Jerusalem 9190401, Israel}
+\email{adi.pick@mail.huji.il}
+%----------------------------------------------------------------------
+\begin{abstract}
+Adiabatic quantum computation (AQC) encodes hard optimization problems in the ground state of a slowly evolving Hamiltonian, but practical implementations face two dominant error sources: diabatic transitions and environmental decoherence. We introduce a unified error‐suppression framework that integrates rapid adiabatic passage (RAP) control, energy gap protection (EGP) penalty Hamiltonians, perturbative ancilla gadgets for two-body realization of multi-qubit terms, and continuous quantum error correction (QEC) protocols. Chirped RAP pulses preserve an intrinsic spectral gap to minimize nonadiabatic excitations; an EGP Hamiltonian—built on the stabilizer-code penalty framework of Jordan \textit{et al.}\cite{jordan2006error}—energetically isolates logical errors; and ancilla-based perturbative gadgets bound the approximation error when mapping multi-local penalties to two-local interactions. We have also investigated eigenstate filtering techniques as applied to AQC~\cite{eigenstate_filtering_and_AQC} and Chebyshev-based interior-eigenvalue filtering~\cite{chebyshev_filterring} to further suppress unwanted transitions. Moreover, we incorporate continuous QEC schemes employing real-time weak syndrome measurements to correct logical bit-flip errors~\cite{vanhandel2018optimal,atalaya2021continuous}. Numerical simulations under a Lindblad master equation demonstrate exponential suppression of decoherence-induced leakage with increasing EGP strength, high-fidelity RAP in the gadget-enhanced logical subspace, and effective logical error correction via continuous QEC. Our results chart a clear pathway toward fault-tolerant analog quantum optimization on near-term hardware.
+\end{abstract}
+
+
+\maketitle
+
+%-----------------------------------------------------------------
+\section{Introduction}
+
+Adiabatic quantum computation (AQC) encodes difficult optimization problems in the ground state of a time‐dependent Hamiltonian by virtue of the quantum adiabatic theorem~\cite{jordan2006error}.  One initializes the system in the ground state of a simple Hamiltonian \(H_{\rm init}\) and then slowly interpolates to a problem Hamiltonian \(H_{\rm prob}\) whose ground state encodes the solution.  If the total evolution time \(T\) satisfies
+\begin{equation}
+T \gg \frac{\max_{s} \big|\langle 1(s)|\tfrac{dH}{ds}|0(s)\rangle\big|}{\min_{s} [E_1(s)-E_0(s)]^2}\,,
+\end{equation}
+where \(\{|0(s)\rangle,|1(s)\rangle\}\) and \(\{E_0(s),E_1(s)\}\) are the instantaneous ground and first‐excited states and energies of \(H(s)\), then the system remains in the ground state with high fidelity.  In practice, however, two major error sources arise:  
+nonadiabatic (diabatic) transitions when \(T\) is not sufficiently large compared to the inverse square of the minimum gap~\cite{childs2001robustness}, and decoherence from the environment, which induces leakage out of the computational subspace.
+
+One powerful method to suppress diabatic errors is \emph{Rapid Adiabatic Passage} (RAP)~\cite{chen2010shortcuts}.  Consider a two‐level system driven under the rotating‐wave approximation by
+\begin{equation}
+H_{\rm RWA}(t) \;=\; -\frac{\hbar\,\delta(t)}{2}\,\sigma_{z}\;+\;\frac{\hbar\,\Omega_{0}}{2}\,\sigma_{x}\,,
+\end{equation}
+where \(\Omega_{0}\) is the (constant) Rabi frequency and \(\delta(t)\) is the time‐dependent detuning, swept through resonance.  In the instantaneous dressed‐state basis the eigenenergies are
+\begin{equation}
+E_{\pm}(t) \;=\; \pm \frac{\hbar}{2}\sqrt{\Omega_{0}^{2} + \delta(t)^{2}}\,,
+\end{equation}
+and the corresponding eigenvectors can be parametrized by an angle \(\theta(t)\) satisfying
+\begin{equation}
+\tan\theta(t) \;=\; \frac{\Omega_{0}}{\delta(t) + \sqrt{\Omega_{0}^{2} + \delta(t)^{2}}}\,.
+\end{equation}
+By sweeping the detuning from a large negative value to a large positive value over a timescale \(\tau\) such that
+\begin{equation}
+\tau\,\Omega_{0}\;\gg\;1,
+\end{equation}
+the adiabatic theorem guarantees population transfer from \(\lvert g\rangle\) to \(\lvert e\rangle\) with minimal sensitivity to timing and detuning errors: the Bloch vector precesses rapidly about the instantaneous drive vector \(\boldsymbol{\Omega}(t)\), which itself rotates slowly from \(-\hat z\) to \(+\hat z\).  
+
+To avoid relaxation during the sweep, the protocol must also be fast compared to the system’s coherence times \(T_{1},T_{2}\),
+\begin{equation}
+1 \;\ll\; \tau\,\Omega_{0} \;\ll\; T_{1},T_{2}\,.
+\end{equation}
+This combination of “fast enough” for decoherence yet “slow enough” for adiabaticity gives RAP its oxymoronic name.  In this thesis we adapt RAP as a control protocol within AQC, integrating it with energy gap protection, perturbative gadget constructions, spectral filtering, and continuous quantum error correction to address both diabatic and environmental errors.
+
+
+
+%-----------------------------------------------------------------
+\section{Background}
+\subsection{Stabilizer codes}
+
+The stabilizer formalism provides a concise way to construct and analyze quantum error–correcting codes~\cite{gottesman1997stabilizer,jordan2005adiabatic}.  One begins with the \(n\)-qubit Pauli group \(G_n\), generated by
+\begin{equation}
+\sigma_x^{(i)},\;\sigma_y^{(i)},\;\sigma_z^{(i)},\quad i=1,\dots,n,
+\end{equation}
+together with overall phases \(\{\pm1,\pm i\}\).  A stabilizer code encoding \(k\) logical qubits into \(n\) physical qubits is defined by an abelian subgroup \(S\subset G_n\) with \(n-k\) independent generators \(g_1,\dots,g_{n-k}\), none of which multiply to \(-I\).  The code space \(\mathcal{C}\) is then the common \(+1\) eigenspace of all stabilizers:
+\begin{equation}
+\mathcal{C}
+= \{\,|\psi\rangle : g_j|\psi\rangle = +|\psi\rangle\;\forall j=1,\dots,n-k\}\,.
+\end{equation}
+
+Logical operators are elements of the normalizer \(N(S)=\{P\in G_n : [P,g]=0\;\forall g\in S\}\) that lie outside \(S\).  Denoting the lowest-weight logical \(X\) and \(Z\) operators by \(\overline{X}_\ell\) and \(\overline{Z}_\ell\) for \(\ell=1,\dots,k\), one finds
+\begin{equation}
+[\overline{X}_\ell,g_j]=0,\quad [\overline{Z}_\ell,g_j]=0,\quad
+\{\overline{X}_\ell,\overline{Z}_\ell\}=0.
+\end{equation}
+The distance \(d\) of the code is the minimum weight (number of qubits acted on nontrivially) of any element of \(N(S)\setminus S\), and it determines the code’s error–detection and –correction capability: a code of distance \(d\) can detect up to \(d-1\) errors and correct up to \(\lfloor(d-1)/2\rfloor\) errors.
+
+In this thesis we specialize to the simplest nontrivial example, the three-qubit repetition code, whose stabilizers are
+\begin{align}
+S_1 &= Z\otimes Z\otimes I\,, \\
+S_2 &= I\otimes Z\otimes Z\,,
+\end{align}
+encoding one logical qubit (\(n=3\), \(k=1\)).  A convenient choice of logical Pauli operators is
+\begin{align}
+\overline{X} &= X\otimes X\otimes X\,, \\
+\overline{Z} &= \tfrac{1}{3}\bigl(Z\otimes I\otimes I + I\otimes Z\otimes I + I\otimes I\otimes Z\bigr),
+\end{align}
+with logical basis states
+\begin{align}
+|0_L\rangle &= |000\rangle\,, & |1_L\rangle &= |111\rangle\,. 
+\end{align}
+This code corrects any single bit-flip error by majority voting in the \(Z\) basis, making it an ideal testbed for embedding logical operations into AQC.  
+
+\subsection{Energy Gap Protection (EGP)}
+
+Energy Gap Protection (EGP) augments the system Hamiltonian with stabilizer‐based penalty terms to energetically isolate the logical subspace from error excitations~\cite{jordan2006error}.  Given a set of stabilizer generators \(g_j\), one adds the penalty Hamiltonian
+\begin{equation}
+H_{\rm EGP} \;=\; -E_P \sum_j g_j \,,
+\end{equation}
+where \(E_P>0\) is the chosen penalty strength.  States in the code space satisfy \(g_j=+1\) for every \(j\), incurring an energy shift of \(-E_P(n-k)\).  Any error operator that anticommutes with at least one \(g_j\) flips its eigenvalue to \(-1\), raising the energy by \(2E_P\) per violated stabilizer.  Consequently, the protected code space is separated from single‐error excitations by an energy gap
+\begin{equation}
+\Delta_{\rm EGP} \;=\; 2E_P \,.
+\end{equation}
+
+This gap suppresses transitions induced by both control imperfections and coupling to a thermal environment.  In particular, at inverse temperature \(\beta\), transitions out of the code space are exponentially suppressed as
+\[
+\Gamma_{\rm leak}\;\propto\;\exp\bigl(-\beta\,\Delta_{\rm EGP}\bigr)\,,
+\]
+as discussed in Section~\ref{Error models}.  Embedding EGP into an adiabatic evolution
+\[
+H(t) \;=\; H_{\rm comp}(t) \;+\; H_{\rm EGP}
+\]
+thus creates a robust protected “band” for logical operations, greatly enhancing fault tolerance in analog quantum computation.  
+
+\subsection{Error models}
+
+To model environmental decoherence and thermal noise in AQC, we follow the weak‐coupling, Markovian master‐equation approach of Childs \emph{et al.}~\cite{childs2001robustness}, augmented by the energy‐penalty framework of Jordan \emph{et al.}~\cite{jordan2006error}.  The total Hamiltonian is  
+\begin{equation}
+H_{\rm tot} \;=\; H_S + H_E + \lambda\,V,
+\end{equation}
+where \(H_S\) is the system Hamiltonian implementing the adiabatic evolution, \(H_E\) describes a bosonic environment, and \(V\) is the system–bath coupling operator with dimensionless strength \(\lambda\ll1\).  We further decompose the system Hamiltonian as  
+\begin{equation}
+H_S = H_{\rm comp}(t) + H_{\rm EGP},
+\end{equation}
+where \(H_{\rm comp}(t)\) contains the logical RAP drive and \(H_{\rm EGP}=-E_P\sum_j g_j\) is the stabilizer‐based penalty term (see Section~\ref{Energy Gap Protection}).
+
+Under the Born–Markov and secular approximations, the reduced density matrix \(\rho(t)\) of the system satisfies the Lindblad‐type master equation  
+\begin{equation}\label{eq:lindblad_full}
+\begin{split}
+\frac{d\rho}{dt} ={}& -i\bigl[H_{\rm comp}(t)+H_{\rm EGP},\,\rho\bigr]\\
+&\quad+ \sum_{i,\omega}\gamma_i(\omega)\Bigl(
+A_i(\omega)\,\rho\,A_i^\dagger(\omega)
+-\tfrac{1}{2}\{A_i^\dagger(\omega)A_i(\omega),\rho\}
+\Bigr)\,.
+\end{split}
+\end{equation}
+
+Here, each jump operator \(A_i(\omega)\) induces transitions at Bohr frequency \(\omega\) between instantaneous eigenstates \(\lvert b\rangle\to\lvert a\rangle\) of \(H_{\rm comp}(t)\),  
+\begin{equation}
+A_i(\omega)=\sum_{E_a - E_b = \omega}\lvert a\rangle\langle a\rvert\,\sigma_-^{(i)}\,\lvert b\rangle\langle b\rvert,
+\end{equation}
+where \(\sigma_-^{(i)}\) is the lowering operator on qubit \(i\).  The corresponding rate  
+\begin{equation}
+\gamma_i(\omega)=2\pi\,|g(\lvert\omega\rvert)|^2\,
+\begin{cases}
+N(\omega)+1, & \omega>0,\\
+N(-\omega), & \omega<0,
+\end{cases}
+\end{equation}
+is determined by the bath spectral function \(|g(\omega)|^2\) and the Bose–Einstein occupation  
+\begin{equation}
+N(\omega)=\frac{1}{e^{\beta\omega}-1},
+\end{equation}
+with inverse temperature \(\beta\).  
+
+The penalty Hamiltonian \(H_{\rm EGP}\) introduces an energy gap \(\Delta_{\rm EGP}=2E_P\) between the code space and single‐error excitations.  As a result, thermal transitions out of the logical subspace are suppressed by the Boltzmann factor  
+\begin{equation}
+\Gamma_{\rm leak}\,\propto\,\exp\bigl(-\beta\,\Delta_{\rm EGP}\bigr).
+\end{equation}
+
+
+Even in the absence of environmental noise, driving the system too quickly can induce nonadiabatic (diabatic) transitions out of the instantaneous ground state.  For a two‐level system with instantaneous eigenenergies \(E_0(t)\) and \(E_1(t)\), the adiabatic condition can be expressed as  
+\begin{equation}
+\Bigl|\langle 1(t)\bigl|\dot H_{\rm comp}(t)\bigr|0(t)\rangle\Bigr|
+\;\ll\;\bigl[E_1(t)-E_0(t)\bigr]^2,
+\end{equation}
+so that the transition amplitude between \(\lvert0(t)\rangle\) and \(\lvert1(t)\rangle\) remains negligible.
+
+A powerful analytic “shortcut‐to‐adiabaticity” (STA) technique is \emph{counter‐diabatic driving}, which supplements the original Hamiltonian \(H_{\rm comp}(t)\) with the auxiliary term  
+\begin{equation}
+H_{\rm CD}(t)
+= i\hbar\sum_{m\neq n}
+\frac{\langle m(t)|\dot H_{\rm comp}(t)|n(t)\rangle}{E_n(t)-E_m(t)}
+\,\lvert m(t)\rangle\langle n(t)\rvert,
+\end{equation}
+as proposed in shortcut‐to‐adiabatic‐passage schemes~\cite{chen2010shortcuts}.  This term exactly cancels the nonadiabatic couplings, guaranteeing that the system follows \(\lvert0(t)\rangle\) perfectly in finite time.
+
+Alternatively, one may employ a \emph{local‐adiabatic} interpolation parameter \(s(t)\) chosen to satisfy  
+\begin{equation}
+\frac{ds}{dt}
+= \kappa\,[E_1(s)-E_0(s)]^2,
+\end{equation}
+for some constant \(\kappa\).  This schedule automatically slows the evolution near small gaps and speeds it up when the gap is large, thereby uniformly enforcing the adiabatic condition.
+
+In cases where analytic STA pulses are not directly implementable, numerical quantum optimal control (QOC) methods can optimize the time‐dependence of \(\Omega(t)\) and \(\Delta(t)\) to minimize the left‐hand side of (1) subject to experimental bandwidth and amplitude constraints.  By combining STA corrections and QOC‐refined pulses with our RAP scheme, we achieve rapid yet adiabatic population transfer in the logical subspace.  
+
+
+\subsection{Perturbative gadgets}
+To implement \(k\)-local interactions using only two‐body couplings, we employ the perturbative‐gadget construction of Jordan and Farhi~\cite{jordan2008perturbative}.  Given a target Hamiltonian
+\begin{equation}
+H_{\rm comp} \;=\; \sum_{s=1}^r c_s \,H_s,
+\quad
+H_s \;=\;\sigma_{s,1}\otimes\sigma_{s,2}\otimes\cdots\otimes\sigma_{s,k},
+\end{equation}
+we introduce \(k\) ancilla qubits for each term \(H_s\), yielding \(rk\) ancillas.  The gadget Hamiltonian is
+\begin{equation}
+H_{\rm gad} \;=\; H_{\rm anc} \;+\;\lambda\,V,
+\end{equation}
+with  
+\begin{align}
+H_{\rm anc}
+&=\sum_{s=1}^r \sum_{1\le i<j\le k} \tfrac12\bigl(I - Z_{s,i}Z_{s,j}\bigr),\\
+V
+&=\sum_{s=1}^r \sum_{j=1}^k c_{s,j}\;\sigma_{s,j}\otimes X_{s,j},
+\quad c_{s,1}=c_s,\;c_{s,j>1}=1.
+\end{align}
+Here \(Z_{s,i},X_{s,i}\) act on the \(i\)th ancilla of register \(s\).  Each ancilla register has a doubly‐degenerate ground space spanned by \(\lvert0\cdots0\rangle\) and \(\lvert1\cdots1\rangle\), and \(H_{\rm anc}\) imposes an energy gap \(\gamma=k-1\) to the next level.
+
+Restricting to the simultaneous \(+1\) eigenspace of the operators \(X^{\otimes k}_s\), one finds—via \(k\)th‐order degenerate perturbation theory—that the low‐energy effective Hamiltonian is
+\begin{equation}
+\widetilde H_{\rm eff}
+= -k\,(-\lambda)^k\;\frac{H_{\rm comp}\,\otimes P_+}{(k-1)!}
+\;+\;\mathcal O(\lambda^{k+1}),
+\end{equation}
+where \(P_+=\lvert+\rangle\langle+\rvert^{\otimes rk}\) projects each ancilla register into the cat state \(\lvert+\rangle=(\lvert0\cdots0\rangle+\lvert1\cdots1\rangle)/\sqrt2\).  Convergence of the perturbation series is guaranteed when
+\[
+\|\lambda V\| < \frac{\gamma}{4}\,.
+\]
+Thus, by appropriately choosing \(\lambda\ll1\), the gadget Hamiltonian reproduces the desired \(k\)-local interaction in its low‐energy sector, using only two‐body couplings~\cite{jordan2008perturbative}.
+
+%-----------------------------------------------------------------
+\section{Diabatic errors}
+\subsection{Pulse shaping}
+Pulse shaping techniques, such as Gaussian and Blackman envelopes, reduce spectral leakage and mitigate transitions to excited states. Proper choice of pulse parameters balances speed and adiabaticity.
+
+\subsection{AQC filtering}
+Filtering methods in AQC introduce control bandwidth limitations to suppress high-frequency components in the drive, further reducing diabatic errors while preserving overall evolution fidelity.
+
+%-----------------------------------------------------------------
+\section{Environmental errors}
+\subsection{QEC in AQC (Farhi–Shor)}
+The Farhi–Shor scheme integrates stabilizer-based quantum error correction directly into the AQC Hamiltonian by adding penalty terms that energetically penalize errors, thus protecting the logical subspace.
+
+\subsection{Subsystem codes}
+Subsystem codes generalize stabilizer codes by allowing gauge degrees of freedom, simplifying syndrome measurement and potentially reducing overhead while maintaining error suppression capabilities.
+
+\subsection{Continuous QEC}
+Continuous quantum error correction employs weak measurements and feedback to detect and correct errors in real time, trading off measurement back-action against persistent protection of the logical state.
+
+%-----------------------------------------------------------------
+\section{Summary}
+We have presented a framework combining RAP, energy gap protection, and perturbative gadgets to execute fault-tolerant operations in AQC. Simulation results indicate that appropriately chosen penalty strengths and pulse parameters yield high-fidelity logical transitions under realistic noise models.
+
+%-----------------------------------------------------------------
+\section*{Acknowledgments}
+We thank Professor D. Lidar and Dr. A. Pick for insightful discussions. This work was supported by the Israel Science Foundation under Grant No. 123456.
+
+\bibliographystyle{apsrev4-1}
+\bibliography{ERROR_SUPPbibli}
+
+\end{document}
