@@ -29,9 +29,9 @@ logical_one = tensor(basis_states[1], basis_states[1], basis_states[1])
 
 
 # RAP time-dependent parameters (default values)
-T_max = 10
+T_max = 20
 
-def time_list(num_points=201):
+def time_list(num_points=51):
     """Generate a list of time points from 0 to T_max."""
     return np.linspace(0, T_max, num_points)
 t_list = time_list()
