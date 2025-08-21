@@ -1,0 +1,16 @@
+Restoration instructions
+
+1) Open your notebook: 3qubit_rep_all/3qubit_real_numbers.ipynb
+2) Create a new code cell near where you want the instantaneous-bound plot to appear.
+3) Open the file restored_instantaneous_bound.py and paste its entire contents into that new code cell.
+4) Ensure the notebook has the following names in scope before running the pasted cell:
+   - make_H_func, spectral_amp, t_list, PLATFORM, lambda_2, omega_max, S1, S2, and a function N_of_Ep(Ep) that returns the dimensionless N(Ep) factor.
+     * Example N_of_Ep: N_of_Ep = lambda Ep: 1.0  # or use bose_einstein_N(Ep, T) if appropriate
+   - to_freq_units if you want unit conversion applied on the y-axis.
+5) Run the pasted cell. It will define helpers and the function plot_instantaneous_bound(...).
+6) Call plot_instantaneous_bound(...) with your Ep_vec and other args, e.g.:
+   plot_instantaneous_bound(Ep_vec=Ep_vec, make_H_func=make_H_func, N_of_Ep_func=lambda Ep: 1.0,
+                            t_list=t_list, lambda_2=lambda_2, S1=S1, S2=S2, PLATFORM=PLATFORM,
+                            epsilon_R=0.1, to_freq_units=params['to_freq_units'])
+
+If you want me to automatically insert this as a new notebook cell, tell me and I will attempt to append it directly into the .ipynb file.
